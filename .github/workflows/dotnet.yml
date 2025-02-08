@@ -1,7 +1,4 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: .NET Build & Test
 
 on:
   push:
@@ -11,18 +8,29 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
+
+    - name: Cache Dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: nuget-${{ runner.os }}-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          nuget-${{ runner.os }}-
+
+    - name: Restore Dependencies
       run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+
+    - name: Build Project
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Run Tests
+      run: dotnet test --no-build --configuration Release --verbosity normal --logger trx

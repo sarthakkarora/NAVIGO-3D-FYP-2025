@@ -3,6 +3,9 @@
 ## 🚀 Overview
 NAV!GO is an advanced indoor navigation system integrating **SLAM-ORB** and **Multiset SDK** in **Unity** to provide accurate 3D mapping and navigation. Designed for environments like malls, airports, and hospitals, it enables real-time localization and efficient pathfinding.
 
+## 2D LINK - 
+https://sarthakkarora.github.io/NAVIGO-RAILWAYS-MAP-SIH/
+
 ## 🗺️ Features
 - **3D Mapping**: Uses SLAM-ORB for real-time map generation
 - **Indoor Positioning**: Multiset SDK integration for precise localization

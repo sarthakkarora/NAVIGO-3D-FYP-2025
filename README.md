@@ -7,11 +7,16 @@ NAV!GO is an advanced indoor navigation system integrating **SLAM-ORB** and **Mu
 https://sarthakkarora.github.io/NAVIGO-RAILWAYS-MAP-SIH/
 
 ## 🗺️ Features
+
 - **3D Mapping**: Uses SLAM-ORB for real-time map generation
+- **2D Navigation**: Traditional map-based navigation using APIs like Google Maps.
+- **3D Scanning & Modeling**: Use LiDAR sensors to scan environments and create dynamic 3D models.
+
 - **Indoor Positioning**: Multiset SDK integration for precise localization
 - **Augmented Navigation**: Visual markers and AR-based path guidance
 - **Unity Engine**: Seamless visualization and user-friendly UI
 - **Real-time Updates**: Dynamic path recalculations based on movement
+
 
 ## 🛠️ Tech Stack
 - **Unity** (for rendering and interaction)

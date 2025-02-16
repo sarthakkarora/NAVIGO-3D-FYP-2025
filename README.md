@@ -1,4 +1,4 @@
-# NAV!GO - Advanced Indoor Navigation with 3D Mapping
+# NAV!GO - Advanced Indoor Navigation with 2D & 3D Mapping
 
 ## 🚀 Overview
 NAV!GO is an advanced indoor navigation system integrating **SLAM-ORB** and **Multiset SDK** in **Unity** to provide accurate 3D mapping and navigation. Designed for environments like malls, airports, and hospitals, it enables real-time localization and efficient pathfinding.
